@@ -23,6 +23,14 @@ while is_running:
         if guess < lowest_num or guess > highest_num:
             print("That number is out of range")
             print(f'Guess a number between {lowest_num} and {highest_num}: ')
+
+        if guess < answer:
+            print('Your answer is too low')
+        elif guess > answer:
+            print('Your answer is too high')
+        else:
+            print('You guessed the correct number!')
+            break
     else:
         print('Invalid input')
         print(f'Guess a number between {lowest_num} and {highest_num}: ')
